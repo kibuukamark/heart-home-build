@@ -4,17 +4,25 @@ import { Button } from "@/components/ui/button";
 import Layout from "@/components/layout/Layout";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
+import gallery3 from "@/assets/gallery-3.png";
+import gallery4 from "@/assets/gallery-4.png";
+import gallery5 from "@/assets/gallery-5.png";
+import gallery6 from "@/assets/gallery-6.png";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
 
 const galleryImages = [
+  { src: gallery3, alt: "LISA Baby Care Home family photo with children and staff", category: "Events" },
+  { src: gallery4, alt: "Team meeting at Baby Care Home", category: "Daily Life" },
+  { src: gallery5, alt: "Donation ceremony with supporters", category: "Events" },
+  { src: gallery6, alt: "Staff receiving supplies", category: "Donations" },
+  { src: gallery7, alt: "Visitor interacting with children", category: "Daily Life" },
+  { src: gallery8, alt: "Community gathering at LISA", category: "Events" },
   { src: gallery1, alt: "Children at LISA Baby Care Home", category: "Daily Life" },
   { src: gallery2, alt: "Happy moments at LISA", category: "Activities" },
-  { src: gallery1, alt: "Learning together", category: "Education" },
-  { src: gallery2, alt: "Playtime at LISA", category: "Activities" },
-  { src: gallery1, alt: "Caring for our youngest", category: "Baby Care" },
-  { src: gallery2, alt: "Community event", category: "Events" },
 ];
 
-const categories = ["All", "Daily Life", "Activities", "Education", "Baby Care", "Events"];
+const categories = ["All", "Daily Life", "Activities", "Events", "Donations"];
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

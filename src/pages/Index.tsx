@@ -1,10 +1,12 @@
-import { Heart, Users, Calendar, ArrowRight, Star } from "lucide-react";
+import { Heart, Users, Calendar, ArrowRight, Star, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Layout from "@/components/layout/Layout";
 import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
+import gallery3 from "@/assets/gallery-3.png";
+import gallery4 from "@/assets/gallery-4.png";
 
 const stats = [
   { icon: Users, value: "50+", label: "Children Cared For" },
@@ -17,35 +19,37 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 bg-gradient-hero opacity-10" />
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        />
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={gallery3}
+            alt="LISA Baby Care Home family"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-foreground/40" />
+        </div>
 
         <div className="container mx-auto px-4 py-20 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="max-w-2xl">
             {/* Hero Content */}
-            <div className="text-center lg:text-left animate-fade-in">
-              <span className="inline-block px-4 py-2 rounded-full bg-secondary/10 text-secondary font-medium text-sm mb-6">
+            <div className="animate-fade-in">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 backdrop-blur-sm text-secondary-foreground border border-secondary/30 font-medium text-sm mb-6">
+                <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
                 Making a Difference in Uganda
               </span>
-              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-card">
                 Every Child Deserves{" "}
-                <span className="text-gradient">Love, Care & Hope</span>
+                <span className="text-secondary">Love, Care & Hope</span>
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-xl mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl text-card/80 mb-8 max-w-xl">
                 LISA Supporting and Sustaining Lives provides a loving home, quality education, and
                 healthcare to orphaned children in Kampala, Uganda.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button
                   size="lg"
-                  className="bg-gradient-cta hover:opacity-90 text-accent-foreground shadow-soft gap-2 text-lg px-8"
+                  className="bg-secondary hover:bg-secondary/90 text-secondary-foreground shadow-soft gap-2 text-lg px-8"
                 >
                   <Heart className="w-5 h-5" />
                   Donate Now
@@ -53,7 +57,7 @@ const Index = () => {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-primary text-primary hover:bg-primary hover:text-primary-foreground gap-2 text-lg px-8"
+                  className="border-card/50 text-card hover:bg-card hover:text-foreground gap-2 text-lg px-8 backdrop-blur-sm"
                   asChild
                 >
                   <Link to="/about">
@@ -62,28 +66,47 @@ const Index = () => {
                   </Link>
                 </Button>
               </div>
-            </div>
 
-            {/* Hero Images */}
-            <div className="relative animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-              <div className="relative z-10">
-                <img
-                  src={gallery1}
-                  alt="Children at LISA Baby Care Home"
-                  className="rounded-2xl shadow-card w-full max-w-md mx-auto"
-                />
+              {/* Floating Stats Preview */}
+              <div className="mt-12 flex flex-wrap gap-6">
+                {stats.slice(0, 3).map((stat) => (
+                  <div key={stat.label} className="flex items-center gap-3 text-card/90">
+                    <div className="w-10 h-10 rounded-full bg-card/10 backdrop-blur-sm flex items-center justify-center">
+                      <stat.icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <p className="font-heading font-bold text-xl">{stat.value}</p>
+                      <p className="text-xs text-card/70">{stat.label}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="absolute -bottom-8 -left-8 z-20 hidden md:block">
-                <img
-                  src={gallery2}
-                  alt="Happy moments at LISA"
-                  className="rounded-2xl shadow-card w-48 border-4 border-card"
-                />
-              </div>
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 bg-secondary/20 rounded-full blur-2xl" />
-              <div className="absolute -bottom-4 left-1/4 w-32 h-32 bg-accent/20 rounded-full blur-2xl" />
             </div>
+          </div>
+        </div>
+
+        {/* Decorative floating images */}
+        <div className="absolute bottom-8 right-8 hidden lg:flex gap-4 z-10">
+          <div className="relative group animate-fade-in" style={{ animationDelay: "0.4s" }}>
+            <img
+              src={gallery1}
+              alt="Children at LISA"
+              className="w-32 h-32 object-cover rounded-xl border-4 border-card shadow-lg transform rotate-3 group-hover:rotate-0 transition-transform"
+            />
+          </div>
+          <div className="relative group animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <img
+              src={gallery2}
+              alt="Happy moments"
+              className="w-32 h-32 object-cover rounded-xl border-4 border-card shadow-lg transform -rotate-3 group-hover:rotate-0 transition-transform"
+            />
+          </div>
+          <div className="relative group animate-fade-in" style={{ animationDelay: "0.8s" }}>
+            <img
+              src={gallery4}
+              alt="LISA Baby Care Home"
+              className="w-32 h-32 object-cover rounded-xl border-4 border-card shadow-lg transform rotate-2 group-hover:rotate-0 transition-transform"
+            />
           </div>
         </div>
       </section>

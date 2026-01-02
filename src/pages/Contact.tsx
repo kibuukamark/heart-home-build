@@ -18,14 +18,14 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@lisauganda.org",
-    link: "mailto:info@lisauganda.org",
+    content: "info@lisassl.org",
+    link: "mailto:info@lisassl.org",
   },
   {
     icon: Phone,
     title: "Phone",
-    content: "+256 700 000 000",
-    link: "tel:+256700000000",
+    content: "+256 393 255 638",
+    link: "tel:+256393255638",
   },
   {
     icon: Clock,

@@ -112,19 +112,19 @@ const Footer = () => {
                 <li className="flex items-center gap-3 text-sm">
                   <Mail className="w-5 h-5 flex-shrink-0" />
                   <a
-                    href="mailto:info@lisauganda.org"
+                    href="mailto:info@lisassl.org"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
-                    info@lisauganda.org
+                    info@lisassl.org
                   </a>
                 </li>
                 <li className="flex items-center gap-3 text-sm">
                   <Phone className="w-5 h-5 flex-shrink-0" />
                   <a
-                    href="tel:+256700000000"
+                    href="tel:+256393255638"
                     className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   >
-                    +256 700 000 000
+                    +256 393 255 638
                   </a>
                 </li>
               </ul>

@@ -148,17 +148,17 @@ const Index = () => {
             <img
               src={partnerOPM}
               alt="Office of the Prime Minister"
-              className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
             <img
               src={partnerMuslimCharity}
               alt="Muslim Charity"
-              className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-12 md:h-16 object-contain hover:scale-105 transition-transform duration-300"
             />
             <img
               src={partnerLisaMedical}
               alt="LISA Medical Centre"
-              className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-16 md:h-20 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>

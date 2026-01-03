@@ -141,7 +141,7 @@ const Index = () => {
               Our Partners
             </span>
             <h2 className="font-heading text-2xl md:text-3xl font-bold">
-              Trusted By Leading Organizations
+              In Partnership With
             </h2>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">

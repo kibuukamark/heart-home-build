@@ -7,6 +7,9 @@ import gallery1 from "@/assets/gallery-1.jpeg";
 import gallery2 from "@/assets/gallery-2.jpeg";
 import gallery3 from "@/assets/gallery-3.png";
 import gallery4 from "@/assets/gallery-4.png";
+import partnerLisaMedical from "@/assets/partner-lisa-medical.png";
+import partnerMuslimCharity from "@/assets/partner-muslim-charity.png";
+import partnerOPM from "@/assets/partner-opm.jpg";
 
 const stats = [
   { icon: Users, value: "50+", label: "Children Cared For" },
@@ -126,6 +129,37 @@ const Index = () => {
                 <p className="text-primary-foreground/70 text-sm">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-10">
+            <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm mb-4">
+              Our Partners
+            </span>
+            <h2 className="font-heading text-2xl md:text-3xl font-bold">
+              Trusted By Leading Organizations
+            </h2>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-20">
+            <img
+              src={partnerOPM}
+              alt="Office of the Prime Minister"
+              className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <img
+              src={partnerMuslimCharity}
+              alt="Muslim Charity"
+              className="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+            />
+            <img
+              src={partnerLisaMedical}
+              alt="LISA Medical Centre"
+              className="h-16 md:h-20 object-contain grayscale hover:grayscale-0 transition-all duration-300"
+            />
           </div>
         </div>
       </section>
